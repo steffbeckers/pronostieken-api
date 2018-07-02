@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  pronostieken:
+    image: ${DOCKER_REGISTRY}pronostieken
+    build:
+      context: .
+      dockerfile: Pronostieken/Dockerfile
