@@ -3,9 +3,9 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>17d7ab54-2880-4b03-8ab0-88298a7a0093</ProjectGuid>
+    <ProjectGuid>bb9588de-bcfb-4bb7-a009-f0782fb452d4</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
-    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/</DockerServiceUrl>
+    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/api/values</DockerServiceUrl>
     <DockerServiceName>pronostieken</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
