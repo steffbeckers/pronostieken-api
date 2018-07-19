@@ -7,14 +7,15 @@ using System.Threading.Tasks;
 
 namespace Pronostieken.Models
 {
-    public class Match
-    {
-        public Guid Id { get; set; }
+  public class Match
+  {
+    [Key]
+    public Guid Id { get; set; }
 
-        [Required]
-        public string Name { get; set; }
+    [Required]
+    public string Name { get; set; }
 
-        [DefaultValue(false)]
-        public bool IsComplete { get; set; }
-    }
+    [DefaultValue(false)]
+    public bool IsComplete { get; set; }
+  }
 }
