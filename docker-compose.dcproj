@@ -5,7 +5,7 @@
     <DockerTargetOS>Linux</DockerTargetOS>
     <ProjectGuid>bb9588de-bcfb-4bb7-a009-f0782fb452d4</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
-    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/api/values</DockerServiceUrl>
+    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
     <DockerServiceName>pronostieken</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
