@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Pronostieken.Data;
 
 namespace Pronostieken.Migrations
 {
     [DbContext(typeof(PronostiekenContext))]
-    partial class PronostiekenContextModelSnapshot : ModelSnapshot
+    [Migration("20181017144343_AddPlayerModel")]
+    partial class AddPlayerModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,8 +40,6 @@ namespace Pronostieken.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Bio");
 
                     b.Property<string>("FirstName")
                         .IsRequired();

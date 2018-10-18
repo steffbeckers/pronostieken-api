@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Pronostieken.Data;
 
 namespace Pronostieken.Migrations
 {
     [DbContext(typeof(PronostiekenContext))]
-    partial class PronostiekenContextModelSnapshot : ModelSnapshot
+    [Migration("20181017144857_BioFieldAddedToPlayer")]
+    partial class BioFieldAddedToPlayer
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
