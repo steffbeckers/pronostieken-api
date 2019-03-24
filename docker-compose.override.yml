@@ -1,8 +1,0 @@
-version: '3.4'
-
-services:
-  pronostieken:
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "80"
