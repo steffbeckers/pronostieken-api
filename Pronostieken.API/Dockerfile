@@ -4,7 +4,7 @@ EXPOSE 80
 
 FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /src
-COPY Pronostieken/Pronostieken.csproj Pronostieken/
+COPY Pronostieken.API/Pronostieken.csproj Pronostieken/
 RUN dotnet restore Pronostieken/Pronostieken.csproj
 COPY . .
 WORKDIR /src/Pronostieken
