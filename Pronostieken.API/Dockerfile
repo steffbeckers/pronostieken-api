@@ -6,7 +6,7 @@ FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /src
 COPY Pronostieken.API.csproj Pronostieken.API/
 RUN dotnet restore Pronostieken.API/Pronostieken.API.csproj
-COPY . .
+COPY . ./Pronostieken.API
 WORKDIR /src/Pronostieken.API
 
 RUN ls
