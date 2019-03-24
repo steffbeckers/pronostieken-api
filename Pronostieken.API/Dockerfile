@@ -8,6 +8,9 @@ COPY Pronostieken.API.csproj Pronostieken.API/
 RUN dotnet restore Pronostieken.API/Pronostieken.API.csproj
 COPY . .
 WORKDIR /src/Pronostieken.API
+
+RUN ls
+
 RUN dotnet build Pronostieken.API.csproj -c Release -o /app
 
 FROM build AS publish
