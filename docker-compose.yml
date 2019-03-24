@@ -1,19 +1,35 @@
-version: "3.4"
+version: "3.7"
 
 services:
   api:
     image: registry.gitlab.com/pronostieken/api
     networks:
       - reverse-proxy_default
+      - default
+    deploy:
+      mode: replicated
+      replicas: 2
+    depends_on:
+      - mssql
   mssql:
     image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+    networks:
+      - default
     environment:
       - ACCEPT_EULA=Y
       - SA_PASSWORD=n05YfG8sGkkUQxUyhaZa
       - MSSQL_PID=Express
     volumes:
       - /root/pronostieken/mssql:/var/opt/mssql
+  ssh:
+    image: corbinu/ssh-server
+    networks:
+      - default
+    volumes:
+      - /root/.ssh/authorized_keys:/root/.ssh/authorized_keys:ro
 
 networks:
   reverse-proxy_default:
     external: true
+  default:
+    internal: true
